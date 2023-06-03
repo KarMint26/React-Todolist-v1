@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-blue-100 p-2;
+}
+
+/* Loader */
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #fd47ff 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #fd47ff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* Loader End */
+
+.btn {
+  @apply text-white p-2 px-[0.85rem] outline-none border-none rounded-lg;
+}
+
+.btn-add {
+  @apply bg-indigo-500 hover:bg-indigo-600;
+}
+
+.btn-edit {
+  @apply bg-amber-500 hover:bg-amber-600;
+}
+
+.btn-delete {
+  @apply bg-red-500 hover:bg-red-600;
+}
+
+.btn-save {
+  @apply bg-violet-500 hover:bg-violet-600;
+}
+
+.btn-cancel {
+  @apply bg-slate-500 hover:bg-slate-600;
+}
+
+.edit-mode {
+  @apply border-b-[1px] border-slate-600;
+}

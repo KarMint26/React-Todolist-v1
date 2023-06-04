@@ -21,7 +21,7 @@ export default function TodoList() {
   const showAlertFailed = () => {
     Swal.fire({
       title: "Invalid Input",
-      text: "Expected More Than 2 Characters",
+      text: "Expected More Than 2 Characters and Less Than 15 Characters",
       icon: "error",
       confirmButtonText: "OK",
       confirmButtonColor: "#EF4444",
@@ -41,11 +41,16 @@ export default function TodoList() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (todo.length > 2) {
-      const dataPost = { todo };
-      postDataAPI(dataPost);
-      setTodo("");
-      setCount((prev) => (prev += 1));
-      showAlertSuccess("Add Todo Success");
+      if (todo.length < 15) {
+        const dataPost = { todo };
+        postDataAPI(dataPost);
+        setTodo("");
+        setCount((prev) => (prev += 1));
+        showAlertSuccess("Add Todo Success");
+      } else {
+        setTodo("");
+        showAlertFailed();
+      }
     } else {
       setTodo("");
       showAlertFailed();
@@ -58,12 +63,16 @@ export default function TodoList() {
     showAlertSuccess("Delete Todo Success");
   };
 
-  const handleUpdate = (id, data) => {
-    if (data.length > 2) {
-      const dataUpdate = { todo: data };
-      putDataAPI(id, dataUpdate);
-      setCount((prev) => (prev += 1));
-      showAlertSuccess("Update Data Success");
+  const handleUpdate = (id, dataUpdate) => {
+    if (dataUpdate.length > 2) {
+      if (dataUpdate.length < 15) {
+        const dataFinal = { todo: dataUpdate };
+        putDataAPI(id, dataFinal);
+        setCount((prev) => (prev += 1));
+        showAlertSuccess("Update Data Success");
+      } else {
+        showAlertFailed();
+      }
     } else {
       showAlertFailed();
     }

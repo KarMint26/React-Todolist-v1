@@ -672,8 +672,8 @@ video {
   min-height: 100vh;
 }
 
-.w-\[400px\] {
-  width: 400px;
+.w-\[500px\] {
+  width: 500px;
 }
 
 .w-\[550px\] {
@@ -694,10 +694,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[500px\] {
-  width: 500px;
 }
 
 .border-collapse {
@@ -738,6 +734,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -748,10 +748,6 @@ video {
 
 .gap-7 {
   gap: 1.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .self-end {
@@ -1214,66 +1210,8 @@ body {
   }
 }
 
-@media (min-width: 640px) {
-  .sm\:w-\[680px\] {
-    width: 680px;
-  }
-
-  .sm\:w-\[670px\] {
-    width: 670px;
-  }
-
-  .sm\:w-\[650px\] {
-    width: 650px;
-  }
-
-  .sm\:w-\[600px\] {
-    width: 600px;
-  }
-
-  .sm\:w-\[850px\] {
-    width: 850px;
-  }
-
-  .sm\:w-\[820px\] {
-    width: 820px;
-  }
-
-  .sm\:w-\[700px\] {
-    width: 700px;
-  }
-
-  .sm\:w-\[500px\] {
-    width: 500px;
-  }
-
-  .sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:w-\[800px\] {
-    width: 800px;
-  }
-}
-
 @media (min-width: 1024px) {
-  .lg\:w-\[690px\] {
-    width: 690px;
-  }
-
-  .lg\:w-\[500px\] {
-    width: 500px;
-  }
-
   .lg\:w-\[800px\] {
     width: 800px;
-  }
-
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }

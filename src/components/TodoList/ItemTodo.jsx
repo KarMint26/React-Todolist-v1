@@ -20,7 +20,7 @@ export default function ItemTodo({
             <input
               type="text"
               value={updateData}
-              className="w-[550px] input-field edit-mode outline-none text-slate-700"
+              className="bg-white w-[550px] input-field edit-mode outline-none text-slate-700"
               disabled={false}
               placeholder="update data here..."
               onChange={({ target }) => setUpdateData(target.value)}
@@ -52,7 +52,7 @@ export default function ItemTodo({
             <input
               type="text"
               value={dataFromTodo.todo}
-              className="w-[550px] input-field outline-none text-slate-700"
+              className="bg-white w-[550px] input-field outline-none text-slate-700"
               disabled={true}
               autoComplete="off"
             />
